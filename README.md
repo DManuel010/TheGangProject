@@ -12,7 +12,7 @@
 	3) "git clone <link>"
 		This will clone the project repository to your local machine.
 
-	4) "cd Syntel-Website"
+	4) "cd TheGangProject"
 		You should now be in the parent project folder.
 
 	NOTE:  This is a one-time setup.  Once you have the repo, you don't need to ever reclone it.
@@ -47,7 +47,7 @@
 ### Pro Steps:
 	cd <path to workspace>
 	git clone <link to repo>
-	cd Syntel-Website
+	cd TheGangProject
 	git checkout master
 	git pull origin master
 	// make some changes

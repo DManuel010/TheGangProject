@@ -1,0 +1,12 @@
+node_modules/
+ios/
+android/
+gen
+build/
+*.snap
+src/assets/
+*.lock
+src/aws-exports.js
+amplify/
+src/serviceWorker.js
+wdio.conf.js

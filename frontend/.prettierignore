@@ -1,0 +1,4 @@
+*.css
+schema.json
+src/aws-exports.js
+amplify/

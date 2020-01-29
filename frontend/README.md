@@ -4,16 +4,16 @@
 
 - NodeJS >v12.14.1: NodeJS Engine. You can download it [here](https://nodejs.org/en/).
 - Yarn package manager: NodeJS has a default built-in package manager (npm) but it is slow when installing dependencies. this is better alternative. You can download it [here](https://legacy.yarnpkg.com/lang/en/) (Make sure using legacy version for now)
-- Visual Studio Code: Honestly you can use any text editor but I personally find this has a lot of plugins if you working on multi language projects. You can download it [here]()
+- Visual Studio Code: Honestly you can use any text editor but I personally find this has a lot of plugins if you working on multi language projects. You can download it [here](https://code.visualstudio.com/)
 
 ## How did this generated?
 
-I used [create-react-app](), which is a boilerplate for React Web App. What it does well is it takes out the WebPack bundling layer (the layer that translate NodeJS code into something web browser can understand) so you can just worry about building the UI.
+I used [create-react-app](https://github.com/facebook/create-react-app), which is a boilerplate for React Web App. What it does well is it takes out the WebPack bundling layer (the layer that translate NodeJS code into something web browser can understand) so you can just worry about building the UI.
 
-If you want to generate your own webapp, after you installed all pre-req, just run
+If you want to generate your own webapp, after you installed all pre-req, just run (from a different directory)
 
 ```
-npx create-react-app .
+npx create-react-app <name-of-the-app-you-want-to create>
 ```
 
 it will generate a boilerplate exactly like this
@@ -57,11 +57,11 @@ src/
 
 ## Development
 
-You need Powershell or Terminal to do this. If you use VisualStudio code, go to the menu tab at the top and choose
-(shortcut is `ctrl + alt + ~`)
+You need Powershell or Terminal to do this.
+If you use VisualStudio code, go to the menu tab at the top and choose
 
 ```
-Terminal > new terminal
+Terminal > new terminal (shortcut is `ctrl + alt + ~`)
 ```
 
 To run this webapp, first of all you need to install all dependencies. From the root of the repo:

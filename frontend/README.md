@@ -1,5 +1,7 @@
 # TheGangProject FrontEnd
 
+![CI](https://github.com/DManuel010/TheGangProject/workflows/CI/badge.svg)
+
 ## Pre-requirements
 
 - NodeJS >v12.14.1: NodeJS Engine. You can download it [here](https://nodejs.org/en/).

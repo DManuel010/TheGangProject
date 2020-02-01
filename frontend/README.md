@@ -6,9 +6,9 @@
 - Yarn package manager: NodeJS has a default built-in package manager (npm) but it is slow when installing dependencies. this is better alternative. You can download it [here](https://legacy.yarnpkg.com/lang/en/) (Make sure using legacy version for now)
 - Visual Studio Code: Honestly you can use any text editor but I personally find this has a lot of plugins if you working on multi language projects. You can download it [here](https://code.visualstudio.com/)
 
-## How did this generated?
+## How did this generate?
 
-I used [create-react-app](https://github.com/facebook/create-react-app), which is a boilerplate for React Web App. What it does well is it takes out the WebPack bundling layer (the layer that translate NodeJS code into something web browser can understand) so you can just worry about building the UI.
+I used [create-react-app](https://github.com/facebook/create-react-app), which is a boilerplate for React Web App. What it does well is it takes out the WebPack bundling layer (the layer that translates NodeJS code into something the web browser can understand) so you can just worry about building the UI.
 
 If you want to generate your own webapp, after you installed all pre-req, just run (from a different directory)
 

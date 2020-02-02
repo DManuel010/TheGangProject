@@ -37,7 +37,7 @@ function App() {
         >
           Click Me
         </Button>
-        <Div style={{ marginTop: 20 }} />
+        <Div style={{ marginTop: 20, color: "#ff7979" }} />
       </header>
     </div>
   );

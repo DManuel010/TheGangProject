@@ -12,7 +12,10 @@ import Div from "./components/DynamicDiv";
 
 function App() {
   return (
-    <div className="App">
+      <div className="App" style={{
+          display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: "column"
+      }}
+      >
           <WebsiteBG />
           <WebsitePC />
           <WebsiteScrollbar />

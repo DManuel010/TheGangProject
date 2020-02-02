@@ -1,32 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import propTypes from "prop-types";
+import "./index.css";
 
 
-class Toggle extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { isToggleOn: true };
+export default function Toggle({ style }) { 
+    const [state, setState] = useState(true);
 
-        // This binding is necessary to make `this` work in the callback
-        this.handleClick = this.handleClick.bind(this);
-    }
+    return (
+        <button
+            onClick={() => {
+                setState(!state);
+            }}
+            className="Toggle" style={style}
+        >
+            {state ? "LOGIN" : "LOGOUT"}
+        </button>
+    );
+};
 
-    handleClick() {
-        this.setState(state => ({
-            isToggleOn: !state.isToggleOn
-        }));
-    }
+Toggle.propTypes = {
+    style: propTypes.object
+};
 
-    render() {
-        return (
-            <div style={{
-                backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center'
-            }}>
-                <button onClick={this.handleClick}>
-                    {this.state.isToggleOn ? 'ON' : 'OFF'}
-                </button>
-            </div>
-        );
-    }
-}
-
-export default Toggle
+Toggle.defaultProps = {
+    style: {}
+};

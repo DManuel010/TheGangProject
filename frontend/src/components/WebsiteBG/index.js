@@ -1,10 +1,5 @@
 import React from "react";
 
+const WebsiteBG = () => <div className="landing-page" />;
 
-const WebsiteBG = () => {
-    return (
-        <div className="landing-page"></div>
-    );
-}
-
-export default WebsiteBG
+export default WebsiteBG;

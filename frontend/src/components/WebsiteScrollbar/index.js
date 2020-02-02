@@ -1,9 +1,5 @@
 import React from "react";
 
-const WebsiteScrollbar = () => {
-    return (
-        <div className="-webkit-scrollbar"></div>
-    );
-}
+const WebsiteScrollbar = () => <div className="-webkit-scrollbar" />;
 
-export default WebsiteScrollbar
+export default WebsiteScrollbar;

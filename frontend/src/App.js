@@ -12,14 +12,15 @@ function App() {
 
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Button 
-          style={{ marginTop: 128 }} 
-          onClick={() => { 
-            window.alert("Me Me Big Boi Gang"); 
-          }}>
+        <Button
+          style={{ marginTop: 128 }}
+          onClick={() => {
+            window.alert("Me Me Big Boi Gang");
+          }}
+        >
           Click Me
         </Button>
-        <Div style={{ marginTop: 20 }}></Div>
+        <Div style={{ marginTop: 20 }} />
       </header>
     </div>
   );

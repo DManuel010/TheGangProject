@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Button from "../Button";
 
-export default function Div({ style}) {
+export default function Div({ style }) {
   const [state, setState] = useState("Initial Text");
   return (
     <>
@@ -10,9 +10,10 @@ export default function Div({ style}) {
         {state}
       </div>
       <Button
-        onClick={() => { 
+        onClick={() => {
           setState("New text");
-        }}>
+        }}
+      >
         Change Text
       </Button>
     </>

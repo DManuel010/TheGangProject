@@ -22,6 +22,7 @@
     "max-len": "off", //handle by prettier
     "comma-dangle": "off",
     "arrow-parens": "off",
+    "no-alert": "off",
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "no-plusplus": "off",
     "no-undef": "off",

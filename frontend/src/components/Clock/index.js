@@ -1,36 +1,30 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-class Clock extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { date: new Date() };
-    }
+// one thing to note is that every time a state or a props change, the component re-render
+// this means that this function run again
+const Clock = () => {
+    const timerIDRef = useRef(); // a ref is something that will persist between every render
+    const [date, setDate] = useState(new Date());
 
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        );
-    }
+    useEffect(() => {
+        const tick = () => {
+            setDate(new Date());
+        };
+        timerIDRef.current = setInterval(() => tick(), 1000);
+        return () => {
+            // cleanup function
+            clearInterval(timerIDRef);
+        };
+    }, []);
 
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-
-    tick() {
-        this.setState({
-            date: new Date()
-        });
-    }
-
-    render() {
-        return (
-            <div style={{ backgroundColor: 'black', color: '#ff7979' }}>
-                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Hello, world!</h1>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>It is {this.state.date.toLocaleTimeString()}.</h2>
-            </div>
-        );
-    }
-}
+    return (
+        <div style={{ backgroundColor: "black", color: "#ff7979" }}>
+            <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>Hello, world!</h1>
+            <h2 style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                It is {date.toLocaleTimeString()}.
+      </h2>
+        </div>
+    );
+};
 
 export default Clock

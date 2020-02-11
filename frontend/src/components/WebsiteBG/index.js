@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 
 const WebsiteBG = () => {
-  //Better version --based on scroll event instead of looped requests
+  //  Better version --based on scroll event instead of looped requests
+  let blurNum;
   const [pos, setPos] = useState(window.pageYOffset); // eslint-disable-line
 
   useEffect(() => {
@@ -14,11 +15,11 @@ const WebsiteBG = () => {
     };
   }, []);
 
-  var blurNum = Math.min(10, pos / 100);
+  blurNum = Math.min(10, pos / 100);
 
   return (
-    <div class="back">
-      <div class="landing-page" style={{ filter: `blur(${blurNum}px)` }} />
+    <div className="back">
+      <div className="landing-page" style={{ filter: `blur(${blurNum}px)` }} />
     </div>
   );
 };

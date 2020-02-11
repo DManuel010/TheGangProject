@@ -5,11 +5,12 @@ import WebsiteScrollbar from "../../components/WebsiteScrollbar";
 import WebsiteText from "../../components/WebsiteText";
 import Clock from "../../components/Clock";
 import Toggle from "../../components/Toggle";
+import "./index.css";
 
 export default function SmiteBuilder() {
   return (
     <div
-      className="App"
+      className="backbody"
       style={{
         display: "flex",
         justifyContent: "center",

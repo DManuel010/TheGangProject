@@ -3,8 +3,8 @@ import "./index.css";
 
 const WebsiteBG = () => {
   //  Better version --based on scroll event instead of looped requests
-  let blurNum;
   const [pos, setPos] = useState(window.pageYOffset); // eslint-disable-line
+  const blurNum = Math.min(10, pos / 100);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -14,8 +14,6 @@ const WebsiteBG = () => {
       window.removeEventListener("scroll");
     };
   }, []);
-
-  blurNum = Math.min(10, pos / 100);
 
   return (
     <div className="back">

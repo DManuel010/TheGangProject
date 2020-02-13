@@ -6,6 +6,7 @@
 
 .backbody {
   background: linear-gradient(#ff7979 20%, #000 80%);
+  overflow-x: hidden;
 }
 
 .page-content {

@@ -5,6 +5,7 @@ import WebsiteScrollbar from "../../components/WebsiteScrollbar";
 import WebsiteText from "../../components/WebsiteText";
 import Clock from "../../components/Clock";
 import Toggle from "../../components/Toggle";
+import GodCards from "../../components/God-Cards";
 import "./index.css";
 
 export default function SmiteBuilder() {
@@ -21,6 +22,7 @@ export default function SmiteBuilder() {
       <WebsiteBG />
       <WebsitePC />
       <WebsiteScrollbar />
+      <GodCards />
       <WebsiteText />
       <Clock />
       <Toggle />

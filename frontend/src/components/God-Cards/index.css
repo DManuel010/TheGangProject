@@ -1,0 +1,45 @@
+.page2 {
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+.page2 h1 {
+  color: #ff7979;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.Roster {
+  width: 99vw;
+  height: 450px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /*border: 3px solid rgba(218, 165, 32, 0.561);*/
+}
+
+.spacing {
+  margin: 20px 0;
+  /*border: 1px solid red;*/
+}
+
+.GodCard {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  /*margin-left: 2vw;*/
+  /*background: url("../../assets/God-Cards/Janus_Default.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;*/
+  border: 2 px outset goldenrod;
+}
+
+.GodCard img {
+  display: block;
+  max-width: 300px;
+  max-height: 400px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  border: 2px outset goldenrod;
+}

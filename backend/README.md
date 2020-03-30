@@ -155,6 +155,10 @@ You can create a simple view in `<app_name>/views.py`:
         text = """<h1>Hello World!</h1>"""
         return HttpResponse(text)
 
-Now run the server with the same 'runserver' command from earlier.  If you add `/<app_name>` to the end of the URL, you should be able to navigate to your view and see the message.
+Now you can start your server:
+
+    $ python manage.py runserver
+    
+If you add `/<app_name>` to the end of the URL, you should be able to navigate to your view and see the message.
 
 The basic setup is done and you know how to create new apps.  This concludes our lesson.  Class dismissed!

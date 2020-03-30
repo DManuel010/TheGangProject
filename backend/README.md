@@ -76,9 +76,10 @@ If you ever break this venv or need to remake it, just delete the 'venv' directo
 >--https://www.djangoproject.com/
 
 You should already have Django installed from the previous **"Setup Python Virtual Environment"** section.
-The following is not necessary as it has already been setup for our project, but will be documented here to keep track of our procedures.
 
 ## Project
+The following is not necessary as it has already been setup for our project, but will be documented here to keep track of our procedures.
+
 With terminal open and venv activated, create the Django project:
 
     $ django-admin startproject <project_name>

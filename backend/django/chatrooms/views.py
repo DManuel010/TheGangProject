@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+# chat/views.py
+from django.shortcuts import render
 
-def hello(request):
-    text = """<h1>Hello World!</h1>"""
-    return HttpResponse(text)
+def index(request):
+    return render(request, 'chat/index.html')

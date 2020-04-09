@@ -8,4 +8,7 @@ from drf_yasg import openapi
 @swagger_auto_schema(methods=['get'], responses={200: "Ya good"})
 @api_view(["GET"])
 def index(request):
-    return HttpResponse("Hello world! This is the testapp index.")
+    """
+    The Gang's Smite Root API
+    """
+    return HttpResponse("Hello world! This is the smitegang index.")

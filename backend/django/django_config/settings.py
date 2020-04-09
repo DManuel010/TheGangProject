@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_config',
+    'drf_yasg',
     'testapp',
+    'smitegang'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,9 @@ ROOT_URLCONF = 'django_config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '/django_config/templates/'),
+                 os.path.join(BASE_DIR, '/smitegang/templates/'),
+                 os.path.join(BASE_DIR, '/testapp/templates/'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +75,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_config.wsgi.application'
 
+SWAGGER_SETTINGS = {
+    "DEFAULT_INFO": "django_config.urls.open_api_info"
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

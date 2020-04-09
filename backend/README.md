@@ -76,9 +76,10 @@ If you ever break this venv or need to remake it, just delete the 'venv' directo
 >--https://www.djangoproject.com/
 
 You should already have Django installed from the previous **"Setup Python Virtual Environment"** section.
-The following is not necessary as it has already been setup for our project, but will be documented here to keep track of our procedures.
 
 ## Project
+The following is not necessary as it has already been setup for our project, but will be documented here to keep track of our procedures.
+
 With terminal open and venv activated, create the Django project:
 
     $ django-admin startproject <project_name>
@@ -154,6 +155,10 @@ You can create a simple view in `<app_name>/views.py`:
         text = """<h1>Hello World!</h1>"""
         return HttpResponse(text)
 
-Now run the server with the same 'runserver' command from earlier.  If you add `/<app_name>` to the end of the URL, you should be able to navigate to your view and see the message.
+Now you can start your server:
+
+    $ python manage.py runserver
+    
+If you add `/<app_name>` to the end of the URL, you should be able to navigate to your view and see the message.
 
 The basic setup is done and you know how to create new apps.  This concludes our lesson.  Class dismissed!

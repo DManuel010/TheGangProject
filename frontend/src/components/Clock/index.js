@@ -18,11 +18,9 @@ const Clock = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "black", color: "#ff7979" }}>
-      <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>Hello, world!</h1>
-      <h2 style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        It is {date.toLocaleTimeString()}.
-      </h2>
+    <div style={{ color: "#ff7979" }}>
+      <h1>Hello, world!</h1>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
     </div>
   );
 };

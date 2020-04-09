@@ -10,6 +10,7 @@
  */
 import React, { useEffect, useState } from "react";
 import Firebase from "firebase";
+import PropTypes from "prop-types";
 import "firebase/auth";
 import { FIREBASE_CONFIG } from "../config";
 
@@ -30,8 +31,8 @@ export const FirebaseContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   useEffect(() => {
     // get current user
-    const unsubscribedFn = firebaseAuth.onAuthStateChanged(currentUser => {
-      setCurrentUser(currentUser || null);
+    const unsubscribedFn = firebaseAuth.onAuthStateChanged(currUsr => {
+      setCurrentUser(currUsr || null);
     });
     return () => {
       unsubscribedFn();
@@ -52,6 +53,10 @@ export const FirebaseContextProvider = ({ children }) => {
       {children}
     </FirebaseContext.Provider>
   );
+};
+
+FirebaseContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default FirebaseContext;

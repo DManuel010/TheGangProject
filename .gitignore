@@ -11,6 +11,7 @@ node_modules/
 # production
 /build
 /venv
+build/
 
 # misc
 .DS_Store

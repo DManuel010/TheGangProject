@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "thegangproject",
+    "dev": "thegangproject",
+    "production": "arceos-684d6"
+  }
+}

@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,9 +15,9 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node-version }}
       - name: Installing Yarn
@@ -27,3 +27,8 @@ jobs:
           cd frontend/
           yarn install
           yarn lint && yarn test --watchAll=false --ci
+      - name: Build Frontend
+        run: |
+          cd frontend/
+          yarn install
+          yarn build

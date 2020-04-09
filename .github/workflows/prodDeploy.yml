@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  firebase-production-deploy:
+    env:
+      FIREBASE_ENV: production
+    if: ${{ github.ref }} == "master"
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "12.x"
+      - name: Installing Yarn
+        run: npm install -g yarn
+      - name: Build Frontend
+        run: |
+          cd frontend/
+          yarn install
+          yarn build
+      - uses: w9jds/firebase-action@master
+        with:
+          args: use ${{ env.FIREBASE_ENV }}
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_DEPLOY_TOKEN }}
+      - uses: w9jds/firebase-action@master
+        with:
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_DEPLOY_TOKEN }}

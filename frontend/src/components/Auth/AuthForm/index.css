@@ -1,0 +1,42 @@
+.authform {
+  padding: 20px;
+  border: 2px solid black;
+  margin-left: 32px;
+  margin-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 200px;
+  text-align: left;
+}
+
+.authinput {
+  text-align: left;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.authinput-label {
+  font-weight: bold;
+  width: 500px;
+  margin-right: 10px;
+}
+
+.authinput-input {
+  width: 200px;
+}
+
+.submit-button {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}

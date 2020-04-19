@@ -9,7 +9,7 @@
  * and import it here
  */
 import React, { useEffect, useState } from "react";
-import Firebase from "firebase";
+import Firebase from "firebase/app";
 import PropTypes from "prop-types";
 import "firebase/auth";
 import { FIREBASE_CONFIG } from "../config";
@@ -44,7 +44,10 @@ export const FirebaseContextProvider = ({ children }) => {
         firebaseObj: firebaseApp,
         auth: {
           authObj: firebaseAuth,
-          signIn: async (email, password) => firebaseAuth.signInWithEmailAndPassword(email, password),
+          signIn: async (email, password) => {
+            const user = await firebaseAuth.signInWithEmailAndPassword(email, password);
+            setCurrentUser(user.user);
+          },
           signUp: async (email, password) => firebaseAuth.createUserWithEmailAndPassword(email, password),
           currentUser,
         },

@@ -1,0 +1,33 @@
+.login-container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-title {
+  margin-bottom: 12px;
+}
+
+.login-subtitle {
+  margin-bottom: 12px;
+  color: goldenrod;
+}
+
+.login-content {
+  width: 100%;
+  display: grid;
+  text-align: center;
+  grid-template-areas: "signupcontent signincontent";
+}
+
+.signup-content {
+  grid-area: signupcontent;
+}
+
+.signin-content {
+  grid-area: signincontent;
+}
